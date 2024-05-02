@@ -33,7 +33,7 @@ html_theme_options = {
         "json_url": f"https://{cname}/versions.json",
         "version_match": switcher_version,
     },
-    "github_url": "https://github.com/ansys/ansys-tools-path",
+    "github_url": "https://github.com/can-ti/ansys-tools-path-zh_CN",
     "show_prev_next": False,
     "show_breadcrumbs": True,
     "collapse_navigation": True,
@@ -50,6 +50,7 @@ extensions = [
     "numpydoc",
     "sphinx.ext.intersphinx",
     "sphinx_copybutton",
+    "sphinx.ext.githubpages", # 这个插件会为生成后的文档添加 .nojekyll 文件， 也会为 GitHub Pages 自定义域名添加 CNAME 文件。 如果没有 .nojekyll， GitHub Pages 会认为 _ 开头的文件夹是 jekyll 内部文件夹， 然后将它过滤掉。
 ]
 
 # Intersphinx mapping

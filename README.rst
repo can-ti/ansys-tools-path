@@ -32,28 +32,28 @@ ansys-tools-path
    :alt: Black
 
 
-Library to locate Ansys products in a local machine.
+一个用于在本地机器中定位 Ansys 产品的库。
 
 .. contribute_start
 
 How to install
 --------------
 
-At least two installation modes are provided: user and developer.
+提供了两种安装模式：用户模式和开发者模式。
 
 For users
 ^^^^^^^^^
+**用户模式**
 
 .. howtoinstallusers_start
 
-In order to install ``ansys-tools-path``, make sure you
-have the latest version of `pip`_. To do so, run:
+要安装 ``ansys-tools-path`` ，请确保已安装最新版本的 `pip`_ 。为此，请运行
 
 .. code:: bash
 
     python -m pip install -U pip
 
-Then, you can simply execute:
+然后，您可以简单地执行：
 
 .. code:: bash
 
@@ -63,36 +63,35 @@ Then, you can simply execute:
 
 For developers
 ^^^^^^^^^^^^^^
+**开发者模式**
 
-Installing ``ansys-tools-path`` in developer mode allows
-you to modify the source and enhance it.
+在开发者模式下安装 ``ansys-tools-path`` 可以修改源代码并对其进行增强。
 
-Before contributing to the project, please refer to the `PyAnsys Developer's guide`_.
-You need to follow these steps:
+在为该项目做出贡献之前，请参考 `PyAnsys Developer's guide`_ 。您需要遵循以下步骤：
 
-#. Start by cloning this repository:
+#. 首先克隆该版本库：
 
    .. code:: bash
 
       git clone https://github.com/ansys/ansys-tools-path
 
-#. Create a fresh-clean Python environment and activate it:
+#. 创建一个全新的 Python 环境并激活它：
 
    .. code:: bash
 
-      # Create a virtual environment
+      # 创建虚拟环境
       python -m venv .venv
 
-      # Activate it in a POSIX system
+      # 在 POSIX 系统中激活
       source .venv/bin/activate
 
-      # Activate it in Windows CMD environment
+      # 在 Windows CMD 环境中激活
       .venv\Scripts\activate.bat
 
-      # Activate it in Windows Powershell
+      # 在 Windows Powershell 中激活
       .venv\Scripts\Activate.ps1
 
-#. Make sure you have the latest required build system and doc, testing, and CI tools:
+#. 确保拥有最新的所需构建系统、文档、测试和 CI 工具：
 
    .. code:: bash
 
@@ -101,7 +100,7 @@ You need to follow these steps:
       python -m pip install .[build]
 
 
-#. Install the project in editable mode:
+#. 以可编辑模式安装项目：
 
    .. code:: bash
 
@@ -110,18 +109,16 @@ You need to follow these steps:
 
 How to testing
 --------------
+**如何测试**
 
-If required, you can always call the style commands (`black`_, `isort`_,
-`flake8`_...) or unit testing ones (`pytest`_) from the command line. However,
-this does not guarantee that your project is being tested in an isolated
-environment, which is the reason why tools like `tox`_ exist.
+如果需要，您可以随时从命令行调用样式命令（ `black`_ 、 `isort`_ 、 `flake8`_ ...）或单元测试命令（ `pytest`_ ）。
+不过，这并不能保证你的项目是在一个隔离的环境中进行测试的，这也是 `tox`_ 等工具存在的原因。
 
 
 A note on pre-commit
 ^^^^^^^^^^^^^^^^^^^^
 
-The style checks take advantage of `pre-commit`_. Developers are not forced but
-encouraged to install this tool via:
+样式检查利用了 `pre-commit`_ 。我们不强制但鼓励开发人员通过以下方式安装该工具：
 
 .. code:: bash
 
@@ -131,19 +128,20 @@ encouraged to install this tool via:
 Documentation
 -------------
 
-For building documentation, you can either run the usual rules provided in the
-`Sphinx`_ Makefile, such us:
+在构建文档时，您可以运行 `Sphinx`_ Makefile 中提供的常规规则，例如：
 
 .. code:: bash
 
     make -C doc/ html && your_browser_name doc/html/index.html
 
+- ``make -C doc/ html`` ：这个命令在 doc/ 目录下执行 make html 命令。make 是一个构建工具，它根据 Makefile 文件中的规则来构建项目。在这个例子中，make html 通常用于从 reStructuredText 文件生成 HTML 文档。
+- ``&&`` ：这是一个 shell 命令连接符，它表示只有当前面的命令成功执行后，才会执行后面的命令。
+- ``your_browser_name doc/html/index.html`` ：这个命令会在你的浏览器中打开 doc/html/index.html 文件。你需要将 your_browser_name 替换为你的浏览器的命令行名称，例如 firefox、chrome 等。
 
 Distributing
 ------------
 
-If you would like to create either source or wheel files, start by installing
-the building requirements and then executing the build module:
+如果要创建源文件或 wheel  文件，首先要安装 building requirements ，然后执行构建模块：
 
 .. code:: bash
 
